@@ -1,10 +1,11 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class SumIntervals {
     public static int sumIntervals(int[][] intervals) {
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
         int sum = 0;
         int start = intervals[0][0];
         int end = intervals[0][1];
