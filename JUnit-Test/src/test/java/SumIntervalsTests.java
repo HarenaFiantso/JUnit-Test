@@ -32,4 +32,9 @@ public class SumIntervalsTests {
         int[][] intervals = {{1, 4}, {5, 8}, {9, 12}};
         Assertions.assertEquals(9, SumIntervals.sumIntervals(intervals));
     }
+    @Test
+    void testOverlappingIntervalsWithGaps() {
+        int[][] intervals = {{1, 4}, {6, 9}, {11, 14}};
+        Assertions.assertEquals(9, SumIntervals.sumIntervals(intervals));
+    }
 }
