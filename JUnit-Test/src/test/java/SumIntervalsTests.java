@@ -20,4 +20,16 @@ public class SumIntervalsTests {
         int[][] intervals = {{1, 5}, {12, 15}, {3, 10}, {13, 18}};
         Assertions.assertEquals(15, SumIntervals.sumIntervals(intervals));
     }
+
+    @Test
+    void testEmptyIntervals() {
+        int[][] intervals = {};
+        Assertions.assertEquals(0, SumIntervals.sumIntervals(intervals));
+    }
+
+    @Test
+    void testNonOverlappingIntervals() {
+        int[][] intervals = {{1, 4}, {5, 8}, {9, 12}};
+        Assertions.assertEquals(9, SumIntervals.sumIntervals(intervals));
+    }
 }

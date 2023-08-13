@@ -5,7 +5,12 @@ import java.util.Comparator;
 
 public class SumIntervals {
     public static int sumIntervals(int[][] intervals) {
+        if (intervals == null || intervals.length == 0) {
+            return 0;
+        }
+
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+
         int sum = 0;
         int start = intervals[0][0];
         int end = intervals[0][1];
