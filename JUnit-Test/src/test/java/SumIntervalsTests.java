@@ -37,4 +37,9 @@ public class SumIntervalsTests {
         int[][] intervals = {{1, 4}, {6, 9}, {11, 14}};
         Assertions.assertEquals(9, SumIntervals.sumIntervals(intervals));
     }
+    @Test
+    void testSingleIntervalRepeated() {
+        int[][] intervals = {{1, 5}, {1, 5}, {1, 5}};
+        Assertions.assertEquals(4, SumIntervals.sumIntervals(intervals));
+    }
 }
